@@ -1,0 +1,1 @@
+(docker ps -a | ? { $_ -like "*benallred/linuxvm*" }) -replace "(.+?)\W+.+", '$1' # this is another option: docker ps -aq -f "ancestor=benallred/linuxvm"
