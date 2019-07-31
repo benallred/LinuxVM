@@ -1,0 +1,1 @@
+docker inspect (.\getContainerId.ps1) -f "{{ .NetworkSettings.IPAddress }}"
