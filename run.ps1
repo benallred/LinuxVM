@@ -5,7 +5,9 @@ if ($containerId) {
 		docker start $containerId
 	}
 } else {
-	$containerId = docker run -itd -v C:\BenLocal:/c/BenLocal -v C:\Work:/c/Work -v C:\BenLocal\git\LinuxVM\share:/root/share benallred/linuxvm
+	$containerId = docker run -itd -v C:\BenLocal:/c/BenLocal -v C:\Work:/c/Work -v C:\BenLocal\git\LinuxVM\share:/root/share -p 2181:2181 benallred/linuxvm
 }
 
 docker exec -it $containerId bash
+
+# (wget 10.0.75.1:2181).Content
