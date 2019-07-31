@@ -6,6 +6,7 @@ run apk add --no-cache \
 	vim \
 	curl \
 	docker \
+	docker-compose \
 	openjdk8
 
 run git clone https://github.com/benallred/configs.git ~/configs && \
