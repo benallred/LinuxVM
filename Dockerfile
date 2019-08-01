@@ -2,6 +2,7 @@ from alpine
 
 run apk add --no-cache \
 	bash \
+	sudo \
 	git \
 	vim \
 	curl \
