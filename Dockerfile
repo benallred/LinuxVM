@@ -13,6 +13,9 @@ run apk add --no-cache \
 run git clone https://github.com/benallred/configs.git ~/configs && \
 	git config --global --add include.path ~/configs/git/ben.gitconfig
 
-copy .bashrc /root/.bashrc
+#run nohup dockerd > /root/dockerd.log 2>&1 &
 
-cmd ["/bin/bash"]
+copy .bashrc /root/.bashrc
+copy startup.sh /root/startup.sh
+
+cmd ["/root/startup.sh"]
