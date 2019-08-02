@@ -5,7 +5,7 @@ if ($containerId) {
 		docker start $containerId
 	}
 } else {
-	$containerId = docker run -itd -v C:\BenLocal:/c/BenLocal -v C:\Work:/c/Work -v C:\BenLocal\git\LinuxVM\share:/root/share --privileged benallred/linuxvm
+	$containerId = docker run -itd -v $PSScriptRoot\share:/root/share --privileged benallred/linuxvm
 }
 
 docker exec -it $containerId bash
